@@ -1,0 +1,23 @@
+package assignment4;
+import java.util.*;
+public class anagram {
+	public static void main(String[] args) {
+	    Scanner scan =new Scanner(System.in);
+	    String s1=scan.nextLine();
+	    String s2=scan.nextLine();
+	    s1=s1.toLowerCase();
+	    s2=s2.toLowerCase();
+	    char [] a=s1.toCharArray();
+	     char [] b=s2.toCharArray();
+	     Arrays.sort(a);
+	     Arrays.sort(b);
+	     if(Arrays.equals(a, b))
+	     {
+	         System.out.println("Anagram");
+	     }
+	     else {
+		System.out.println("Not anagram");
+	}
+	}
+
+}
