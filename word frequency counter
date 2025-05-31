@@ -1,0 +1,22 @@
+package assignment4;
+import java.util.*;
+
+public class WordFrequencyCounter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String sentence = sc.nextLine();
+
+        String[] words = sentence.split(" ");
+        Map<String, Integer> wordCount = new LinkedHashMap<>();
+
+        for (String word : words) {
+            wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+        }
+
+        for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println( entry.getValue());
+            }
+        }
+    }
+}
